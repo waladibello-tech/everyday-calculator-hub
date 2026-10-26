@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Free everyday calculators for percentages, discounts, business profit margins, and age. Fast, simple, and private.">
+  <meta name="theme-color" content="#173f35">
+  <title>Everyday Calculator Hub — Free Online Calculators</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Everyday Calculator Hub home">
+      <span class="brand-mark" aria-hidden="true">∑</span>
+      <span>Everyday <strong>Calculator Hub</strong></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#calculators">Calculators</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">FREE • SIMPLE • INSTANT</p>
+      <h1>Everyday answers.<br><span>Calculated in seconds.</span></h1>
+      <p class="hero-copy">Useful calculators for shopping, school, business, and everyday life. No account needed.</p>
+      <a class="primary-link" href="#calculators">Explore calculators <span aria-hidden="true">↓</span></a>
+      <div class="hero-note"><span class="status-dot"></span> Your calculations happen in your browser.</div>
+    </section>
+
+    <section class="calculator-section" id="calculators">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE TOOLKIT</p>
+          <h2>Choose a calculator</h2>
+        </div>
+        <p class="section-description">Enter your values and get a clear result immediately.</p>
+      </div>
+
+      <div class="calculator-grid">
+        <article class="calc-card" id="percentage">
+          <div class="card-icon" aria-hidden="true">%</div>
+          <h3>Percentage calculator</h3>
+          <p class="card-intro">Find a percentage of a number, or find what percentage one number is of another.</p>
+          <form id="percentage-form" class="calc-form">
+            <label for="percent-value">What is <span class="inline-fields"><input id="percent-rate" type="number" step="any" value="15" required aria-label="Percentage"> % of</span> this number?</label>
+            <input id="percent-value" type="number" step="any" value="200" required>
+            <button type="submit">Calculate percentage</button>
+          </form>
+          <div class="result" id="percentage-result" role="status" aria-live="polite">15% of 200 = 30</div>
+          <details class="more-tool">
+            <summary>Find what percentage one number is of another</summary>
+            <form id="ratio-form" class="calc-form compact-form">
+              <label for="ratio-part">First number</label><input id="ratio-part" type="number" step="any" value="30" required>
+              <label for="ratio-whole">Total number</label><input id="ratio-whole" type="number" step="any" value="200" required>
+              <button type="submit" class="secondary-button">Find percentage</button>
+            </form>
+            <div class="result subtle-result" id="ratio-result" role="status" aria-live="polite">30 is 15% of 200.</div>
+          </details>
+        </article>
+
+        <article class="calc-card" id="discount">
+          <div class="card-icon" aria-hidden="true">%</div>
+          <h3>Discount calculator</h3>
+          <p class="card-intro">See how much you save and what you'll pay after a discount.</p>
+          <form id="discount-form" class="calc-form">
+            <label for="original-price">Original price</label>
+            <input id="original-price" type="number" min="0" step="any" value="100000" required>
+            <label for="discount-rate">Discount (%)</label>
+            <input id="discount-rate" type="number" min="0" max="100" step="any" value="20" required>
+            <button type="submit">Calculate discount</button>
+          </form>
+          <div class="result" id="discount-result" role="status" aria-live="polite">You save 20,000; new price: 80,000.</div>
+          <p class="field-hint">Uses the same currency unit as your original price.</p>
+        </article>
+
+        <article class="calc-card" id="profit">
+          <div class="card-icon" aria-hidden="true">↗</div>
+          <h3>Profit &amp; margin calculator</h3>
+          <p class="card-intro">Compare your selling price with your costs to understand your profit.</p>
+          <form id="profit-form" class="calc-form">
+            <label for="cost-price">Total cost</label>
+            <input id="cost-price" type="number" min="0" step="any" value="70000" required>
+            <label for="selling-price">Selling price</label>
+            <input id="selling-price" type="number" min="0" step="any" value="100000" required>
+            <button type="submit">Calculate profit</button>
+          </form>
+          <div class="result" id="profit-result" role="status" aria-live="polite">Profit: 30,000 • Margin: 30%</div>
+          <p class="field-hint">Margin is profit divided by selling price. Markup is profit divided by cost.</p>
+        </article>
+
+        <article class="calc-card" id="age">
+          <div class="card-icon" aria-hidden="true">⌁</div>
+          <h3>Age calculator</h3>
+          <p class="card-intro">Calculate your age in years, months, and days from your date of birth.</p>
+          <form id="age-form" class="calc-form">
+            <label for="birth-date">Date of birth</label>
+            <input id="birth-date" type="date" required>
+            <label for="age-as-of">Calculate age on</label>
+            <input id="age-as-of" type="date" required>
+            <button type="submit">Calculate age</button>
+          </form>
+          <div class="result" id="age-result" role="status" aria-live="polite">Choose your dates to calculate your age.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div>
+        <p class="eyebrow">MADE TO BE USEFUL</p>
+        <h2>Simple tools. Clear results.</h2>
+      </div>
+      <div class="about-copy">
+        <p>Everyday Calculator Hub is designed to make common calculations quick and understandable. The tools run locally in your browser, so the values you enter are not sent to a server by this page.</p>
+        <p>Results are for general information. Check important financial or business calculations before making decisions.</p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <h2>Have an idea for a calculator?</h2>
+      <p>More useful tools can be added as the site grows.</p>
+      <a href="mailto:hello@example.com?subject=Calculator%20suggestion" class="text-link">Suggest a tool <span aria-hidden="true">↗</span></a>
+      <p class="small-note">Before launch, replace hello@example.com with an email address you control.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#"><span class="brand-mark" aria-hidden="true">∑</span><span>Everyday <strong>Calculator Hub</strong></span></a>
+    <p>Free everyday tools. No account required.</p>
+    <p class="copyright">© <span id="year"></span> Everyday Calculator Hub</p>
+  </footer>
+</body>
+</html>
